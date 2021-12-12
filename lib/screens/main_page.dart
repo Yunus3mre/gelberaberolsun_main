@@ -91,7 +91,7 @@ class _MainPageState extends State<MainPage> {
                 onTap: () {
                   setState(() {
                     activeTab = 3;
-                    Navigator.pushNamed(context, '/Profile');
+                    Navigator.pushNamed(context, '/Profile',arguments: "DEneme");
                   });
                 },
                 child: const Icon(

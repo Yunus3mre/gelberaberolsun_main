@@ -84,6 +84,7 @@ class ProfileEdit extends StatelessWidget {
                         Navigator.of(context).pushNamedAndRemoveUntil(
                             '/Main', (Route<dynamic> route) => false);
                         ///push mainPage and clear navigation stack
+                        
                       },
                       child: Text("Profili Güncelle"),
                       style: ElevatedButton.styleFrom(

@@ -7,12 +7,20 @@ import 'package:smooth_star_rating/smooth_star_rating.dart';
 class UserProfilePage extends StatefulWidget {
   @override
   _UserProfilePageState createState() => _UserProfilePageState();
+
+String deneme;
+  UserProfilePage({this.deneme});
+
+
 }
 
 class _UserProfilePageState extends State<UserProfilePage> {
   String yas="", meslek="";
    
  String bio="";
+
+ 
+
 
   @override
   void initState() {
@@ -25,7 +33,7 @@ class _UserProfilePageState extends State<UserProfilePage> {
       yas = value["yas"];
       bio = value["bio"];
       print("meslek:$meslek    yas:$yas");
-
+      
       setState(() {});
     });
   }

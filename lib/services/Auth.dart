@@ -76,6 +76,16 @@ class Auth {
 
  }
 
+ Future<DocumentSnapshot>getUserDocument(String refPath,String id)async{
+   DocumentSnapshot snapshot;
+  //await getRef(refPath).doc(getCurrentUser().uid).get().then((value) => snapshot=value);
+  //return snapshot;
+   snapshot=await getRef("Users").doc(id).get();
+   return snapshot;
+  
+
+ }
+
  Future<void> documentDelete(String uid)async{
    await _firebaseFirestore.collection("request").doc(uid).delete();
  }

@@ -4,6 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:gelberaberolsun/data/post_json.dart';
+import 'package:gelberaberolsun/screens/direct_message_main.dart';
 import 'package:gelberaberolsun/services/Auth.dart';
 import 'package:provider/provider.dart';
 
@@ -372,7 +373,9 @@ class MyColumn2 extends StatelessWidget {
               padding: const EdgeInsets.only(bottom: 30),
               child: GestureDetector(
                 onTap: (){
-                  print(map["isim"]);
+                  String id=map["uid"];
+                  print("sadasdas $id");
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>DmCards(id: id)));
                 },
                 onDoubleTap: () async {
                   
